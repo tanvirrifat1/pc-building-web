@@ -1,7 +1,4 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 import React from "react";
 import Navbar from "@/components/shared/Navbar";
@@ -15,12 +12,12 @@ const home = ({ allPC }) => {
     <div>
       <Head>
         <title>PC-Store</title>
-        <Navbar />
-        <Slider />
-        <div className="ml-10">
-          <AllPC allPC={allPC} />
-        </div>
       </Head>
+      <Navbar />
+      <Slider />
+      <div className="ml-10">
+        <AllPC allPC={allPC} />
+      </div>
       <Footer />
     </div>
   );

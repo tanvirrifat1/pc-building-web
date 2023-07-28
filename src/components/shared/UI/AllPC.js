@@ -1,7 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
 const AllPC = ({ allPC }) => {
-  console.log(allPC);
   return (
     <div>
       <div>
@@ -18,10 +18,15 @@ const AllPC = ({ allPC }) => {
                 <img className="w-[100%] h-72" src={pc.image} alt="Shoes" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">{pc.category}</h2>
+                <p>{pc.product_name}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn w-full btn-primary">Buy Now</button>
+                  <Link
+                    className="btn btn-secondary btn-outline w-full"
+                    href={`/pc_components/${pc.id}`}
+                  >
+                    <button>Read more</button>
+                  </Link>
                 </div>
               </div>
             </div>
