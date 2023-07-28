@@ -22,8 +22,8 @@ const AllPC = ({ allPC }) => {
                 <p>{pc.product_name}</p>
                 <div className="card-actions justify-end">
                   <Link
-                    className="btn btn-secondary btn-outline w-full"
-                    href={`/pc_components/${pc.id}`}
+                    className="btn btn-outline text-black w-full"
+                    href={`/allPc/${pc.id}`}
                   >
                     <button>Read more</button>
                   </Link>

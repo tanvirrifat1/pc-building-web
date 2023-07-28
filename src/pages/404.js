@@ -1,7 +1,14 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const ErrorPage = () => {
+  const router = useRouter();
+
+  setTimeout(() => {
+    router.push("/");
+  }, 3000);
+
   return (
     <div>
       <section className="flex items-center h-full sm:p-16">
