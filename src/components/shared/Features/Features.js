@@ -15,32 +15,32 @@ const Features = () => {
 
   const categories = [
     {
-      id: 1,
+      _id: 1,
       icon: cup,
-      category: "processor",
+      category: "processors",
     },
     {
-      id: 2,
+      _id: 2,
       icon: motherboard,
       category: "motherboard",
     },
     {
-      id: 3,
+      _id: 3,
       icon: powerSupply,
-      category: "powerSupply",
+      category: "Power Supply",
     },
     {
-      id: 4,
+      _id: 4,
       icon: storage,
-      category: "storage",
+      category: "storage device",
     },
     {
-      id: 5,
+      _id: 5,
       icon: ram,
-      category: "ram",
+      category: "RAM",
     },
     {
-      id: 6,
+      _id: 6,
       icon: monitor,
       category: "monitor",
     },
@@ -54,9 +54,9 @@ const Features = () => {
           Get choice product from the category
         </h3>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-5 py-5 ml-12">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-5 py-5">
         {categories?.map((category) => (
-          <FeatureCard key={category.id} category={category} />
+          <FeatureCard key={category._id} category={category} />
         ))}
       </div>
     </div>

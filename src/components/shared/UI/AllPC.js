@@ -10,7 +10,7 @@ const AllPC = ({ allPC }) => {
           Get your product from the category
         </h3>
       </div>
-      <div>
+      <div className="flex justify-center">
         <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {allPC?.data.map((pc) => (
             <div key={pc.id} className="card  bg-base-100 shadow-xl">

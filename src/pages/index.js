@@ -17,9 +17,9 @@ const home = ({ allPC }) => {
       <Navbar />
       <Slider />
       <Features />
-      <div className="ml-10">
-        <AllPC allPC={allPC} />
-      </div>
+
+      <AllPC allPC={allPC} />
+
       <Footer />
     </div>
   );

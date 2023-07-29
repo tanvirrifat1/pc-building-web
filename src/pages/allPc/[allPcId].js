@@ -4,9 +4,9 @@ import RootLayout from "../layout/RootLayout";
 const AllPcDetails = ({ desktop }) => {
   return (
     <div className="mt-6">
-      <div className="card lg:card-side bg-base-300 shadow-xl">
-        <figure className="h-full ">
-          <img src={desktop.image} alt="Album" />
+      <div className="card lg:card-side lg:shadow-2xl">
+        <figure className="h-[500px] w-[800px] ">
+          <img className="rounded-3xl" src={desktop.image} alt="Album" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Name:{desktop.category}</h2>
@@ -23,9 +23,6 @@ const AllPcDetails = ({ desktop }) => {
             <p className="font-semibold py-2">
               rating: {desktop.average_rating}
             </p>
-          </div>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
           </div>
         </div>
       </div>
