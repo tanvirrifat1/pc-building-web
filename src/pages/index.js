@@ -6,6 +6,7 @@ import Footer from "@/components/shared/Footer";
 import Slider from "@/components/shared/Slider";
 import Head from "next/head";
 import AllPC from "@/components/shared/UI/AllPC";
+import Features from "@/components/shared/Features/Features";
 
 const home = ({ allPC }) => {
   return (
@@ -15,6 +16,7 @@ const home = ({ allPC }) => {
       </Head>
       <Navbar />
       <Slider />
+      <Features />
       <div className="ml-10">
         <AllPC allPC={allPC} />
       </div>
