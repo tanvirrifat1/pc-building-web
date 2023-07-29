@@ -5,7 +5,7 @@ const AllPcDetails = ({ desktop }) => {
   return (
     <div className="mt-6">
       <div className="card lg:card-side bg-base-300 shadow-xl">
-        <figure>
+        <figure className="h-full ">
           <img src={desktop.image} alt="Album" />
         </figure>
         <div className="card-body">
