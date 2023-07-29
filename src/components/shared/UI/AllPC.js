@@ -12,7 +12,7 @@ const AllPC = ({ allPC }) => {
       </div>
       <div>
         <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {allPC?.map((pc) => (
+          {allPC?.data.map((pc) => (
             <div key={pc.id} className="card  bg-base-100 shadow-xl">
               <figure>
                 <img className="w-[100%] h-72" src={pc.image} alt="Shoes" />
@@ -23,7 +23,7 @@ const AllPC = ({ allPC }) => {
                 <div className="card-actions justify-end">
                   <Link
                     className="btn btn-outline text-black w-full"
-                    href={`/allPc/${pc.id}`}
+                    href={`/allPc/${pc._id}`}
                   >
                     <button>Read more</button>
                   </Link>

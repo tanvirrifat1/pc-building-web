@@ -39,24 +39,11 @@ AllPcDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/pc_components");
-  const allPcs = await res.json();
-
-  const paths = allPcs.map((pc) => ({
-    params: { allPcId: pc.id },
-  }));
-
-  return { paths, fallback: true };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { params } = context;
-  const res = await fetch(
-    `http://localhost:5000/pc_components/${params?.allPcId}`
-  );
+  console.log(params);
+  const res = await fetch(`http://localhost:5000/product/${params?.allPcId}`);
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       desktop: data,

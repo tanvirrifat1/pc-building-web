@@ -4,7 +4,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const { data: session } = useSession();
-  console.log(session);
+
   return (
     <div className="navbar bg-base-300">
       <div className="navbar-start">
@@ -65,7 +65,9 @@ const Navbar = () => {
             <img src={session?.user?.image} />
           </div>
         </div>
-        <button className="btn btn-outline text-black">PC Build</button>
+        <Link href="/PcBuild">
+          <button className="btn btn-outline text-black">PC Build</button>
+        </Link>
       </div>
     </div>
   );
