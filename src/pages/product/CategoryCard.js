@@ -1,7 +1,6 @@
 import React from "react";
 
 const CategoryCard = ({ card }) => {
-  console.log(card);
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure className="w-full h-60 rounded-xl">
