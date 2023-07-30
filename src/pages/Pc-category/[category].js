@@ -1,19 +1,18 @@
 import React from "react";
 import RootLayout from "../layout/RootLayout";
-import AllCategoryDetails from "./AllCategoryDetails";
+import AllPcCategory from "./AllPcCategory";
 
-const CategoryDetails = ({ allCard }) => {
-  // console.log(allCard);
+const AllCategory = ({ AllFeatures }) => {
   return (
-    <div className="flex justify-center">
-      <AllCategoryDetails allCard={allCard} />
+    <div>
+      <AllPcCategory AllFeatures={AllFeatures} />
     </div>
   );
 };
 
-export default CategoryDetails;
+export default AllCategory;
 
-CategoryDetails.getLayout = function getLayout(page) {
+AllCategory.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
@@ -25,7 +24,7 @@ export const getServerSideProps = async (context) => {
   // console.log(data);
   return {
     props: {
-      allCard: data.data,
+      AllFeatures: data.data,
     },
   };
 };

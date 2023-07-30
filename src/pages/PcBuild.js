@@ -4,7 +4,7 @@ import { BsCpu, BsMotherboard, BsPower } from "react-icons/bs";
 import { MdOutlineSdStorage } from "react-icons/md";
 import { CgSmartphoneRam } from "react-icons/cg";
 import { FiMonitor } from "react-icons/fi";
-import PcBuildDetails from "./PcBuildDetails";
+import PcBuildDetails from "./Pc-category/PcBuildDetails";
 
 const PcBuild = () => {
   const cup = <BsCpu />;
