@@ -4,14 +4,14 @@ const CategoryCard = ({ card }) => {
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure className="w-full h-60 rounded-xl">
-        <img src={card.image} alt="Shoes" />
+        <img src={card?.image} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="text-2xl"> {card.product_name}</h2>
-        <h2 className="card-title"> {card.category}</h2>
+        <h2 className="text-2xl"> {card?.product_name}</h2>
+        <h2 className="card-title"> {card?.category}</h2>
         <div>
-          <p>{card.status}</p>
-          <p>{card.price}</p>
+          <p>{card?.status}</p>
+          <p>{card?.price}</p>
           <div className="rating">
             <input
               type="radio"

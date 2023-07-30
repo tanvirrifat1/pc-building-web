@@ -50,7 +50,9 @@ const login = () => {
         <div className="flex justify-center space-x-4">
           <button
             onClick={() =>
-              signIn("google", { callbackUrl: "http://localhost:3000" })
+              signIn("google", {
+                callbackUrl: "https://pc-builder-tanvirrifat1.vercel.app",
+              })
             }
             aria-label="Log in with Google"
             className="p-3 rounded-sm"
@@ -65,7 +67,9 @@ const login = () => {
           </button>
           <button
             onClick={() =>
-              signIn("github", { callbackUrl: "http://localhost:3000" })
+              signIn("github", {
+                callbackUrl: "https://pc-builder-tanvirrifat1.vercel.app",
+              })
             }
             aria-label="Log in with GitHub"
             className="p-3  rounded-sm"

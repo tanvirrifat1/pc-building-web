@@ -5,8 +5,10 @@ import { MdOutlineSdStorage } from "react-icons/md";
 import { CgSmartphoneRam } from "react-icons/cg";
 import { FiMonitor } from "react-icons/fi";
 import PcBuildDetails from "./Pc-category/PcBuildDetails";
+import SinglePC from "./SinglePC";
+import { getSession } from "next-auth/react";
 
-const PcBuild = () => {
+const PcBuild = ({ allPC }) => {
   const cup = <BsCpu />;
   const motherboard = <BsMotherboard />;
   const powerSupply = <BsPower />;
@@ -56,8 +58,11 @@ const PcBuild = () => {
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-5 py-5">
         {categories?.map((category) => (
-          <PcBuildDetails key={category.id} category={category} />
+          <PcBuildDetails key={category?.id} category={category} />
         ))}
+      </div>
+      <div>
+        <SinglePC allPC={allPC} />
       </div>
     </div>
   );
@@ -67,4 +72,19 @@ export default PcBuild;
 
 PcBuild.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context);
+  const email = session?.user?.email;
+  const res = await fetch(
+    `https://pc-builder-server-jade.vercel.app/user?email=${email}`
+  );
+  const data = await res.json();
+
+  return {
+    props: {
+      allPC: data,
+    },
+  };
 };

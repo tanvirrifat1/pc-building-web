@@ -5,12 +5,12 @@ const PcBuildDetails = ({ category }) => {
   return (
     <div className="hero  bg-slate-300 m-6 rounded-xl flex justify-center">
       <div className="hero-content flex-col lg:flex-row">
-        <Link href={`/Pc-category/${category.category}`}>
+        <Link href={`/Pc-category/${category?.category}`}>
           <div className="bg-slate-300 m-6 rounded-xl">
-            <h1 className="text-6xl ">{category.icon}</h1>
+            <h1 className="text-6xl ">{category?.icon}</h1>
           </div>
           <div>
-            <p className="py-6">{category.category}</p>
+            <p className="py-6">{category?.category}</p>
             <button className="btn btn-outline text-black">Choice</button>
           </div>
         </Link>

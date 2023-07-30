@@ -33,12 +33,12 @@ const Navbar = () => {
               <button className="btn btn-outline text-black mr-3">Login</button>
             </Link>
 
-            <li>
+            {/* <li>
               <a>Portfolio</a>
             </li>
             <li>
               <a>About</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
