@@ -11,8 +11,8 @@ const AllPC = ({ allPC }) => {
         </h3>
       </div>
       <div className="flex justify-center">
-        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 m-6 gap-3">
-          {allPC?.data.slice(0, 17).map((pc) => (
+        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-6 gap-3">
+          {allPC?.data?.slice(0, 12).map((pc) => (
             <div key={pc.id} className="card  bg-base-100 shadow-xl">
               <figure className="w-full h-60 rounded-xl">
                 <img className="w-[100%] h-72" src={pc.image} alt="Shoes" />

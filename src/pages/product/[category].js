@@ -20,9 +20,7 @@ CategoryDetails.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
 
-  const res = await fetch(
-    `https://pc-builder-server-jade.vercel.app/allPc/${params?.category}`
-  );
+  const res = await fetch(`http://localhost:5000/allPc/${params?.category}`);
   const data = await res.json();
   // console.log(data);
   return {

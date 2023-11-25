@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { toast } from "react-hot-toast";
 
 const SinglePC = ({ allPC }) => {
@@ -13,7 +14,7 @@ const SinglePC = ({ allPC }) => {
           {allPC?.data?.map((pc) => (
             <div key={pc?.id} className="card  bg-base-100 shadow-xl">
               <figure className="w-full h-60 rounded-xl">
-                <img className="w-[100%] h-72" src={pc?.image} alt="Shoes" />
+                <Image className="w-[100%] h-72" src={pc?.image} alt="Shoes" />
               </figure>
 
               <div className="card-body">

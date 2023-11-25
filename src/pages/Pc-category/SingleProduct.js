@@ -1,4 +1,5 @@
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
@@ -18,20 +19,16 @@ const SingleProduct = ({ card }) => {
     try {
       // console.log("Sending request with data:", card);
 
-      const response = await fetch(
-        "https://pc-builder-server-jade.vercel.app/user",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(product),
-        }
-      );
+      const response = await fetch("http://localhost:5000/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      });
       router.push("/PcBuild");
-      console.log("Response:", response);
 
-      // ... Rest of the code ...
+      console.log("Sending request with data:", product);
     } catch (error) {
       console.error("Error:", error.message);
     } finally {
@@ -43,7 +40,7 @@ const SingleProduct = ({ card }) => {
     <div>
       <div className="hero flex justify-center">
         <div className="hero-content flex-col lg:flex-row">
-          <img
+          <Image
             src={card?.image}
             className="max-w-sm w-80 h-80 rounded-lg shadow-2xl"
             alt=""

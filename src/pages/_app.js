@@ -6,9 +6,11 @@ export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <SessionProvider session={pageProps.session}>
-      <Toaster position="top-center" reverseOrder={false} />{" "}
-      {getLayout(<Component {...pageProps} />)}
-    </SessionProvider>
+    <div className="max-w-[1440px] mx-auto">
+      <SessionProvider session={pageProps.session}>
+        <Toaster position="top-center" reverseOrder={false} />{" "}
+        {getLayout(<Component {...pageProps} />)}
+      </SessionProvider>
+    </div>
   );
 }
