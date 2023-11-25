@@ -77,7 +77,9 @@ PcBuild.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);
   const email = session?.user?.email;
-  const res = await fetch(`http://localhost:5000/user?email=${email}`);
+  const res = await fetch(
+    `https://pc-builder-server-jade.vercel.app/user?email=${email}`
+  );
   const data = await res.json();
 
   return {

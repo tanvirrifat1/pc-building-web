@@ -1,1 +1,1 @@
-Live-link = https://pc-builder-tanvirrifat1.vercel.app/
+Live-link = https://pc-builder-server-jade.vercel.app/

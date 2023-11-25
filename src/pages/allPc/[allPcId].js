@@ -93,7 +93,9 @@ AllPcDetails.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   console.log(params);
-  const res = await fetch(`http://localhost:5000/product/${params?.allPcId}`);
+  const res = await fetch(
+    `https://pc-builder-server-jade.vercel.app/product/${params?.allPcId}`
+  );
   const data = await res.json();
   return {
     props: {

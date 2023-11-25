@@ -28,7 +28,7 @@ const home = ({ allPC }) => {
 export default home;
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5000/allPc");
+  const res = await fetch("https://pc-builder-server-jade.vercel.app/allPc");
   const data = await res.json();
 
   return {

@@ -51,7 +51,7 @@ const login = () => {
           <button
             onClick={() =>
               signIn("google", {
-                callbackUrl: "https://pc-builder-tanvirrifat1.vercel.app",
+                callbackUrl: "https://pc-builder-omega.vercel.app",
               })
             }
             aria-label="Log in with Google"
@@ -68,7 +68,7 @@ const login = () => {
           <button
             onClick={() =>
               signIn("github", {
-                callbackUrl: "https://pc-builder-tanvirrifat1.vercel.app",
+                callbackUrl: "https://pc-builder-omega.vercel.app",
               })
             }
             aria-label="Log in with GitHub"
@@ -104,3 +104,4 @@ export default login;
 login.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
+// https://pc-builder-server-jade.vercel.app

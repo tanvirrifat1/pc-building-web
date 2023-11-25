@@ -17,23 +17,15 @@ const Navbar = () => {
       <li className="font-bold">
         <Link href="/PcBuild">PC Build</Link>
       </li>
-      <div>
+      <li>
         {session?.user ? (
-          <li
-            onClick={() => signOut()}
-            className="btn btn-outline text-black mr-3"
-          >
+          <li onClick={() => signOut()} className="font-bold">
             LoginOut
           </li>
         ) : (
           <></>
         )}
-        <div className="avatar">
-          <div className="w-12 m-2 rounded-full">
-            <Image src={session?.user?.image} alt="" />
-          </div>
-        </div>
-      </div>
+      </li>
     </>
   );
 

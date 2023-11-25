@@ -19,13 +19,16 @@ const SingleProduct = ({ card }) => {
     try {
       // console.log("Sending request with data:", card);
 
-      const response = await fetch("http://localhost:5000/user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(product),
-      });
+      const response = await fetch(
+        "https://pc-builder-server-jade.vercel.app/user",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(product),
+        }
+      );
       router.push("/PcBuild");
 
       console.log("Sending request with data:", product);
