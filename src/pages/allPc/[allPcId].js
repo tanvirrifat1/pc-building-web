@@ -92,7 +92,7 @@ AllPcDetails.getLayout = function getLayout(page) {
 
 export const getServerSideProps = async (context) => {
   const { params } = context;
-  console.log(params);
+
   const res = await fetch(
     `https://pc-builder-server-jade.vercel.app/product/${params?.allPcId}`
   );
